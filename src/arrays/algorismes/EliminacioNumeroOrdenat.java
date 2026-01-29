@@ -5,16 +5,26 @@ void main() {
 
     int index = Arrays.binarySearch(numeros, eliminar);
 
+//    eliminarValor(numeros, index);
+    int[] resultat = eliminarValor(numeros, index);
+
+    System.out.println(Arrays.toString(resultat));
+}
+
+//private static void eliminarValor(int[] numeros, int index) {
 //    for (int i = index; i < numeros.length - 1; i++) {
 //        numeros[i] = numeros[i + 1];
 //    }
+//
+//    numeros = Arrays.copyOf(numeros, numeros.length - 1);
+//
+//}
 
+private static int[] eliminarValor(int[] numeros, int index) {
     int[] resultat = new int[numeros.length - 1];
 
     System.arraycopy(numeros, 0, resultat, 0, index);
     System.arraycopy(numeros, index + 1, resultat, index, numeros.length - index - 1);
 
-//    numeros = Arrays.copyOf(numeros, numeros.length - 1);
-
-    System.out.println(Arrays.toString(resultat));
+    return resultat;
 }
