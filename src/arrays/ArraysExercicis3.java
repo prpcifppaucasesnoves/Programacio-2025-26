@@ -1,4 +1,4 @@
-private static void Exercici1() {
+private void Exercici1() {
     int[][] matriu = new int[3][3];
 
     // Omplim la matriu
@@ -12,7 +12,7 @@ private static void Exercici1() {
     imprimirMatriu(matriu);
 }
 
-private static void imprimirMatriu(int[][] matriu) {
+private void imprimirMatriu(int[][] matriu) {
     System.out.println();
     System.out.println("MATRIU: " + matriu.length + " x " + matriu[0].length);
     for (int i = 0; i < matriu.length; i++) {
@@ -24,7 +24,7 @@ private static void imprimirMatriu(int[][] matriu) {
     System.out.println();
 }
 
-private static void Exercici2() {
+private void Exercici2() {
     System.out.print("De quina mida vols la matriu?: ");
     Scanner sc = new Scanner(System.in);
     int mida = sc.nextInt();
@@ -44,7 +44,7 @@ private static void Exercici2() {
     imprimirMatriu(matriu);
 }
 
-private static void Exercici3() {
+private void Exercici3() {
     int[][] matriu = new int[5][5];
 
     for (int i = 0; i < matriu.length; i++) {
@@ -60,7 +60,7 @@ private static void Exercici3() {
     imprimirMatriu(matriu);
 }
 
-private static void Exercici4() {
+private void Exercici4() {
     int[][] matriu = new int[4][4];
     Random rnd = new Random();
 
@@ -83,7 +83,7 @@ private static void Exercici4() {
     System.out.println("El número total es: " + sumatori);
 }
 
-private static void Exercici5() {
+private void Exercici5() {
     int[][] matriu = new int[5][5];
     Random rnd = new Random();
     for (int i = 0; i < matriu.length; i++) {

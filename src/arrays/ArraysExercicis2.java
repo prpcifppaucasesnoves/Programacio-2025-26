@@ -19,7 +19,7 @@ private void Exercici1() {
     System.out.println("El mes més fred ha estat el " + traduirMes(indexMin + 1) + " amb " + tempMinima + " graus.");
 }
 
-private static double temperaturaMaxima(double[] temperatures) {
+private double temperaturaMaxima(double[] temperatures) {
     double maxima = temperatures[0];
     for (int i = 1; i < temperatures.length; i++) {
         if (temperatures[i] > maxima) {
@@ -30,7 +30,7 @@ private static double temperaturaMaxima(double[] temperatures) {
     return maxima;
 }
 
-private static double tempareturaMinima(double[] temperatures) {
+private double tempareturaMinima(double[] temperatures) {
     double minima = temperatures[0];
     for (int i = 1; i < temperatures.length; i++) {
         if (temperatures[i] < minima) {
@@ -41,7 +41,7 @@ private static double tempareturaMinima(double[] temperatures) {
     return minima;
 }
 
-private static double temperaturaMitjana(double[] temperatures) {
+private double temperaturaMitjana(double[] temperatures) {
     double suma = 0;
     for (int i = 1; i < temperatures.length; i++) {
         suma += temperatures[i];
@@ -50,7 +50,7 @@ private static double temperaturaMitjana(double[] temperatures) {
     return suma / temperatures.length;
 }
 
-private static String traduirMes(int mes) {
+private String traduirMes(int mes) {
     return switch (mes) {
         case 1 -> "gener";
         case 2 -> "febrer";
@@ -67,7 +67,7 @@ private static String traduirMes(int mes) {
     };
 }
 
-private static int cercaIndex(double[] temperatures, double temperatura) {
+private int cercaIndex(double[] temperatures, double temperatura) {
     boolean trobat = false;
     int index = 0;
     while (index < temperatures.length && !trobat) {
@@ -90,7 +90,7 @@ private void Exercici2() {
     System.out.println("Array invertit: " + Arrays.toString(n));
 }
 
-private static void inverteixArray(int[] n) {
+private void inverteixArray(int[] n) {
     for (int i = 0; i < n.length / 2; i++) {
         int aux = n[i];
         n[i] = n[n.length - i - 1];
@@ -170,7 +170,7 @@ private void Exercici5() {
     System.out.println(Arrays.toString(nousPunts));
 }
 
-private static int cercaIndex(int[] punts, int usuari) {
+private int cercaIndex(int[] punts, int usuari) {
     int posicio = Arrays.binarySearch(punts, usuari);
     return posicio < 0 ? (posicio * -1) - 1 : posicio;
 }
